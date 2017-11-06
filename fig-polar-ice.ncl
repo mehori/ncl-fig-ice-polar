@@ -24,16 +24,16 @@ begin
   res1@cnFillOn                 = True
   res1@cnLevelSelectionMode     = "ExplicitLevels"
   res1@cnLevels                 = (/  0.10, 0.15, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0 /)
-  res1@cnFillColors             = (/  30, 40,50,55,60,70,80,90,100,120, 0  /)
+  res1@cnFillColors             = (/  30,40,50,80,85,90,95,100,105,110, 0  /)
 
   ; contour over ice
   res1@cnLinesOn                = True
-  res1@cnLineThicknessF         = 0.5
-  res1@cnLineColor              = (/0.8, 0.8, 0.8/)
+  res1@cnLineThicknessF         = 1
+  res1@cnLineColor              = (/0.9, 0.9, 0.9/)
 
   ; land / ocean
-  res1@mpOceanFillColor         = 30
-  res1@mpLandFillColor          = (/0.86, 0.85, 0.65/)
+  res1@mpOceanFillColor         = (/ 0.00, 0.11, 0.51 /)
+  res1@mpLandFillColor          = (/ 0.86, 0.85, 0.72 /)
 
   ; draw
   plot = gsn_csm_contour_map_polar(wks,ice,res1)
